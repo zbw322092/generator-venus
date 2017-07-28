@@ -1,20 +1,50 @@
 {
   "name": "generator-venus",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "",
+  "author": {
+    "name": "Bowen Zhong",
+    "email": "bz4e14@soton.ac.uk",
+    "url": ""
   },
   "files": [
     "generators"
   ],
+  "main": "generators/index.js",
   "keywords": [
+    "",
     "yeoman-generator"
   ],
-  "author": "Bowen Zhong",
-  "license": "ISC",
+  "devDependencies": {
+    "yeoman-test": "^1.6.0",
+    "yeoman-assert": "^3.0.0",
+    "nsp": "^2.6.3",
+    "eslint": "^4.1.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^19.0.2",
+    "jest-cli": "^20.0.0"
+  },
   "dependencies": {
-    "yeoman-generator": "^1.1.1"
-  }
+    "yeoman-generator": "^1.0.0",
+    "chalk": "^1.1.3",
+    "yosay": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint . --fix",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "repository": "zbw322092/generator-venus",
+  "license": "MIT"
 }
