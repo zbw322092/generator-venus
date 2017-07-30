@@ -1,17 +1,15 @@
 'use strict';
-const Generator = require('yeoman-generator');
+const venus = require('venus-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 
-module.exports = class extends Generator {
+module.exports = venus.Base.extend({
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
       'Welcome to the neat ' + chalk.red('generator-venus') + ' generator!'
     ));
-  }
 
-  writing() {
-
+    return this.venusPrompting();
   }
-};
+});
